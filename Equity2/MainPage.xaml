@@ -2,7 +2,8 @@
 <Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Equity2.MainPage"
-             xmlns:pages="clr-namespace:Equity2.Pages">
+             xmlns:local="clr-namespace:Equity2.Pages"
+       Title="EquityX">
 
     <Shell.FlyoutHeader>
         <Grid RowDefinitions="*"
@@ -14,6 +15,7 @@
                    Grid.Column="0"/>
             <Label Text="Equity X"
                    Grid.Column="1"
+                   Grid.Row="0"
                    FontSize="30"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"/>
@@ -24,22 +26,24 @@
 
     </Shell.FlyoutHeader>
 
-    <FlyoutItem
-        Title="Deciduous Trees"
-        Icon="tree.png">
+    <FlyoutItem 
+        Title="Page1">
+        <ShellContent
+        Title="Page1"
+        ContentTemplate="{DataTemplate local:ContentPage1}" />
 
-
-
+        <ShellContent
+        Title="Page2"
+        ContentTemplate="{DataTemplate local:ContentPage2}" />
     </FlyoutItem>
 
-    <Shell.FlyoutBackdrop>
-        <LinearGradientBrush StartPoint="0,0"
-                             EndPoint="0,1">
-            <GradientStop Color="#5DBB63" Offset="0.1"/>
-            <GradientStop Color="#3CB043" Offset="0.6"/>
-            <GradientStop Color="#345A21" Offset="1.6"/>
+    <FlyoutItem 
+        Title="Test">
+        <ShellContent
+        Title="Test"
+        ContentTemplate="{DataTemplate local:ContentPage2}" />
+    </FlyoutItem>
 
-        </LinearGradientBrush>
-    </Shell.FlyoutBackdrop>
+
 
 </Shell>

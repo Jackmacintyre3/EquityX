@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Equity2/.vs/Equity2/FileContentIndex/3b146200-8f65-4f7b-b67a-c90c613174b1.vsidx
+*.vsidx
